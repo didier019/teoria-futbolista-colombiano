@@ -1,0 +1,3177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="La Teoría del Futbolista Colombiano: fútbol, genialidad, caos, contexto, memes y análisis.">
+
+    <meta name="keywords"
+        content="teoría futbolista colombiano, fútbol colombiano, jugadores colombianos, Luquitas Rodríguez, Juan Fernando Quintero, Jhon Durán, Teófilo Gutiérrez">
+
+    <meta name="author" content="Proyecto académico">
+
+    <title>La Teoría del Futbolista Colombiano</title>
+
+    <style>
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+            --amarillo: #FCD116;
+            --azul: #003893;
+            --rojo: #CE1126;
+
+            --negro: #090909;
+            --negro-2: #111111;
+            --gris: #1b1b1b;
+            --gris-2: #242424;
+
+            --blanco: #ffffff;
+            --gris-texto: #bdbdbd;
+
+            --verde: #23d160;
+            --rojo-alerta: #ff4d4d;
+
+            --sombra: 0 15px 40px rgba(0,0,0,0.35);
+
+            --radio: 18px;
+
+            --transicion: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--negro);
+            color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 999;
+
+            background: rgba(0,0,0,0.90);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            padding: 15px 5%;
+        }
+
+        .nav-container {
+            max-width: 1250px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 900;
+
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--amarillo);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            color: #ddd;
+
+            transition: var(--transicion);
+        }
+
+        .nav-links a:hover {
+            color: var(--amarillo);
+        }
+
+        .menu-btn {
+            display: none;
+
+            background: none;
+            border: none;
+
+            color: white;
+
+            font-size: 1.5rem;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.97),
+                    rgba(0,0,0,0.70),
+                    rgba(0,0,0,0.35)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Quintero%202018.png")
+                center/cover no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            background: var(--amarillo);
+
+            border-radius: 50%;
+
+            filter: blur(180px);
+
+            opacity: 0.10;
+
+            right: -200px;
+            top: -200px;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding-top: 80px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .tag {
+            display: inline-block;
+
+            padding: 8px 14px;
+
+            border: 1px solid rgba(252,209,22,0.5);
+
+            color: var(--amarillo);
+
+            border-radius: 50px;
+
+            font-size: 0.75rem;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+
+            line-height: 0.92;
+
+            max-width: 900px;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: var(--amarillo);
+        }
+
+        .hero-description {
+            max-width: 720px;
+
+            color: #ddd;
+
+            font-size: 1.15rem;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            transition: var(--transicion);
+        }
+
+        .btn-primary {
+            background: var(--amarillo);
+
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(252,209,22,0.25);
+        }
+
+        .btn-secondary {
+            border: 1px solid #555;
+
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* =========================================================
+           GENERAL
+        ========================================================= */
+
+        section {
+            padding: 100px 5%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+
+            line-height: 1;
+
+            margin-bottom: 20px;
+
+            letter-spacing: -2px;
+        }
+
+        .section-title span {
+            color: var(--amarillo);
+        }
+
+        .section-subtitle {
+            color: var(--gris-texto);
+
+            max-width: 750px;
+
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            background: #0e0e0e;
+        }
+
+        .intro-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .big-question {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+
+            font-weight: 900;
+
+            line-height: 1.05;
+        }
+
+        .big-question span {
+            color: var(--amarillo);
+        }
+
+        .text-content p {
+            color: #ccc;
+
+            margin-bottom: 18px;
+        }
+
+        .definition {
+            background: var(--gris);
+
+            border-left: 5px solid var(--amarillo);
+
+            padding: 25px;
+
+            border-radius: 0 var(--radio) var(--radio) 0;
+
+            margin-top: 25px;
+        }
+
+        .definition strong {
+            color: var(--amarillo);
+        }
+
+
+        /* =========================================================
+           "REGLAS"
+        ========================================================= */
+
+        .rules {
+            background: #050505;
+        }
+
+        .rules-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .rule {
+            background: linear-gradient(
+                145deg,
+                #191919,
+                #0d0d0d
+            );
+
+            border: 1px solid #292929;
+
+            border-radius: var(--radio);
+
+            padding: 30px;
+
+            transition: var(--transicion);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .rule::after {
+            content: attr(data-number);
+
+            position: absolute;
+
+            right: 15px;
+            top: 0;
+
+            font-size: 5rem;
+
+            font-weight: 900;
+
+            color: rgba(255,255,255,0.03);
+        }
+
+        .rule:hover {
+            transform: translateY(-7px);
+
+            border-color: var(--amarillo);
+        }
+
+        .rule-icon {
+            font-size: 2rem;
+
+            margin-bottom: 15px;
+        }
+
+        .rule h3 {
+            margin-bottom: 10px;
+        }
+
+        .rule p {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+
+        /* =========================================================
+           MAGIA VS CAOS
+        ========================================================= */
+
+        .split {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .magic,
+        .chaos {
+            padding: 40px;
+
+            border-radius: var(--radio);
+
+            min-height: 350px;
+        }
+
+        .magic {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(252,209,22,0.18),
+                    rgba(0,56,147,0.15)
+                );
+
+            border: 1px solid rgba(252,209,22,0.25);
+        }
+
+        .chaos {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(206,17,38,0.18),
+                    rgba(0,0,0,0.4)
+                );
+
+            border: 1px solid rgba(206,17,38,0.30);
+        }
+
+        .split h3 {
+            font-size: 2rem;
+
+            margin-bottom: 20px;
+        }
+
+        .split ul {
+            list-style: none;
+        }
+
+        .split li {
+            margin-bottom: 15px;
+
+            color: #ddd;
+        }
+
+        .split li::before {
+            margin-right: 10px;
+        }
+
+        .magic li::before {
+            content: "⚡";
+        }
+
+        .chaos li::before {
+            content: "💥";
+        }
+
+
+        /* =========================================================
+           JUGADORES
+        ========================================================= */
+
+        .players {
+            background: #0d0d0d;
+        }
+
+        .players-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .player-card {
+            background: #151515;
+
+            border-radius: var(--radio);
+
+            overflow: hidden;
+
+            border: 1px solid #272727;
+
+            transition: var(--transicion);
+        }
+
+        .player-card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--amarillo);
+        }
+
+        .player-image {
+            height: 330px;
+
+            overflow: hidden;
+        }
+
+        .player-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        .player-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .player-info {
+            padding: 25px;
+        }
+
+        .player-info small {
+            color: var(--amarillo);
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+            font-size: 0.7rem;
+        }
+
+        .player-info h3 {
+            font-size: 1.6rem;
+
+            margin: 7px 0 12px;
+        }
+
+        .player-info p {
+            color: #aaa;
+
+            font-size: 0.9rem;
+        }
+
+        .player-tag {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 6px 10px;
+
+            background: #222;
+
+            border-radius: 50px;
+
+            font-size: 0.7rem;
+
+            color: #ddd;
+        }
+
+
+        /* =========================================================
+           CASOS
+        ========================================================= */
+
+        .cases {
+            background: #050505;
+        }
+
+        .case {
+            display: grid;
+
+            grid-template-columns:
+                120px 1fr;
+
+            gap: 30px;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid #242424;
+        }
+
+        .case-number {
+            font-size: 4rem;
+
+            font-weight: 900;
+
+            color: rgba(252,209,22,0.25);
+
+            line-height: 1;
+        }
+
+        .case h3 {
+            font-size: 1.7rem;
+
+            margin-bottom: 10px;
+        }
+
+        .case p {
+            color: #aaa;
+
+            max-width: 850px;
+        }
+
+        .case .context {
+            margin-top: 15px;
+
+            display: inline-block;
+
+            color: var(--amarillo);
+
+            font-size: 0.8rem;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           QUINTERO FEATURE
+        ========================================================= */
+
+        .featured {
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.98),
+                    rgba(0,0,0,0.72)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Quintero%202018.png")
+                center/cover no-repeat;
+        }
+
+        .featured-content {
+            max-width: 750px;
+        }
+
+        .featured h2 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+        }
+
+        .featured h2 span {
+            color: var(--amarillo);
+        }
+
+        .quote {
+            font-size: 1.3rem;
+
+            font-style: italic;
+
+            color: #ddd;
+
+            padding-left: 20px;
+
+            border-left: 3px solid var(--amarillo);
+
+            margin: 25px 0;
+        }
+
+
+        /* =========================================================
+           PERSONALIDADES
+        ========================================================= */
+
+        .personality-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .personality {
+            padding: 25px;
+
+            background: var(--gris);
+
+            border-radius: var(--radio);
+
+            text-align: center;
+
+            border: 1px solid #292929;
+
+            transition: var(--transicion);
+        }
+
+        .personality:hover {
+            transform: scale(1.03);
+
+            border-color: var(--amarillo);
+        }
+
+        .personality .emoji {
+            font-size: 2.3rem;
+
+            margin-bottom: 12px;
+        }
+
+        .personality h3 {
+            font-size: 1rem;
+
+            margin-bottom: 8px;
+        }
+
+        .personality p {
+            color: #999;
+
+            font-size: 0.8rem;
+        }
+
+
+        /* =========================================================
+           REDES / MEME
+        ========================================================= */
+
+        .social-section {
+            background:
+                linear-gradient(
+                    135deg,
+                    #001d4d,
+                    #080808 60%
+                );
+        }
+
+        .social-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .social-card {
+            padding: 30px;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: var(--radio);
+        }
+
+        .social-card .platform {
+            color: var(--amarillo);
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .social-card p {
+            color: #ddd;
+        }
+
+        .social-card .opinion {
+            color: #888;
+
+            font-size: 0.8rem;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================================================
+           DEBATE
+        ========================================================= */
+
+        .debate {
+            background: #0c0c0c;
+        }
+
+        .debate-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .argument {
+            padding: 35px;
+
+            border-radius: var(--radio);
+
+            background: #161616;
+
+            border: 1px solid #292929;
+        }
+
+        .argument h3 {
+            margin-bottom: 15px;
+        }
+
+        .argument p {
+            color: #aaa;
+        }
+
+        .argument.positive {
+            border-top: 4px solid var(--verde);
+        }
+
+        .argument.negative {
+            border-top: 4px solid var(--rojo-alerta);
+        }
+
+
+        /* =========================================================
+           MITO / REALIDAD
+        ========================================================= */
+
+        .myth-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: #151515;
+
+            border-radius: var(--radio);
+
+            overflow: hidden;
+        }
+
+        .myth-table th,
+        .myth-table td {
+            padding: 20px;
+
+            text-align: left;
+
+            border-bottom: 1px solid #292929;
+        }
+
+        .myth-table th {
+            background: #202020;
+
+            color: var(--amarillo);
+        }
+
+        .myth-table td {
+            color: #bbb;
+        }
+
+
+        /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline {
+            position: relative;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 25px;
+
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+
+            background: #333;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 75px;
+
+            margin-bottom: 50px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 13px;
+
+            width: 25px;
+            height: 25px;
+
+            background: var(--amarillo);
+
+            border-radius: 50%;
+
+            border: 5px solid #080808;
+        }
+
+        .timeline-year {
+            color: var(--amarillo);
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: #999;
+        }
+
+
+        /* =========================================================
+           SOURCES
+        ========================================================= */
+
+        .sources {
+            background: #050505;
+        }
+
+        .source-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .source {
+            display: block;
+
+            background: #151515;
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+            border: 1px solid #292929;
+
+            transition: var(--transicion);
+        }
+
+        .source:hover {
+            border-color: var(--amarillo);
+
+            transform: translateX(5px);
+        }
+
+        .source strong {
+            color: white;
+        }
+
+        .source span {
+            display: block;
+
+            color: #777;
+
+            font-size: 0.8rem;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #000;
+
+            padding: 60px 5% 30px;
+
+            border-top: 1px solid #222;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+
+            font-weight: 900;
+        }
+
+        .footer-title span {
+            color: var(--amarillo);
+        }
+
+        .footer-note {
+            max-width: 600px;
+
+            color: #777;
+
+            font-size: 0.8rem;
+        }
+
+        .copyright {
+            text-align: center;
+
+            color: #555;
+
+            margin-top: 40px;
+
+            font-size: 0.75rem;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media(max-width: 900px) {
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 65px;
+
+                right: 5%;
+
+                background: #111;
+
+                padding: 20px;
+
+                border-radius: 15px;
+
+                flex-direction: column;
+
+                width: 220px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .intro-grid,
+            .split,
+            .debate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .players-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .rules-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .personality-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .source-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width: 600px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .players-grid,
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .case-number {
+                font-size: 2.5rem;
+            }
+
+            .personality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .myth-table {
+                font-size: 0.8rem;
+            }
+
+            .myth-table th,
+            .myth-table td {
+                padding: 12px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#inicio" class="logo">
+                FÚTBOL <span>SIN CONTEXTO</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#teoria">La teoría</a>
+                </li>
+
+                <li>
+                    <a href="#reglas">Reglas</a>
+                </li>
+
+                <li>
+                    <a href="#jugadores">Jugadores</a>
+                </li>
+
+                <li>
+                    <a href="#casos">Casos</a>
+                </li>
+
+                <li>
+                    <a href="#debate">Debate</a>
+                </li>
+
+                <li>
+                    <a href="#fuentes">Fuentes</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <header class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Una teoría futbolera que nació como meme
+            </span>
+
+            <h1>
+                LA TEORÍA DEL
+                <span>FUTBOLISTA COLOMBIANO</span>
+            </h1>
+
+            <p class="hero-description">
+
+                ¿Por qué un jugador colombiano puede hacer una genialidad
+                que parece imposible... y cinco minutos después tomar una
+                decisión que nadie entiende?
+
+                Bienvenidos al universo del fútbol sin contexto.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#teoria" class="btn btn-primary">
+                    DESCUBRIR LA TEORÍA
+                </a>
+
+                <a href="#jugadores" class="btn btn-secondary">
+                    VER LOS EJEMPLOS
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         INTRO
+    ========================================================== -->
+
+    <section class="intro" id="teoria">
+
+        <div class="container">
+
+            <div class="intro-grid">
+
+                <div>
+
+                    <div class="big-question">
+
+                        ¿Y si el problema...
+
+                        <span>
+                            nunca fue el talento?
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="text-content">
+
+                    <p>
+
+                        La llamada <strong>"Teoría del Futbolista Colombiano"</strong>
+                        es una idea humorística popularizada por el streamer argentino
+                        Lucas "Luquitas" Rodríguez.
+
+                    </p>
+
+                    <p>
+
+                        Según la teoría, determinados futbolistas colombianos parecen
+                        jugar sin tener completamente presente el contexto del partido.
+
+                        Eso puede producir dos resultados completamente opuestos:
+
+                    </p>
+
+                    <div class="definition">
+
+                        <strong>MAGIA O CAOS.</strong>
+
+                        <br><br>
+
+                        Una genialidad absurda o una decisión completamente
+                        inexplicable.
+
+                    </div>
+
+                    <p>
+
+                        La clave está en que la teoría no afirma literalmente que
+                        todos los jugadores colombianos sean así.
+
+                        Es un concepto nacido del humor futbolero y posteriormente
+                        utilizado por aficionados y periodistas para explicar
+                        determinadas situaciones.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REGLAS
+    ========================================================== -->
+
+    <section class="rules" id="reglas">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Las <span>reglas</span> de la teoría
+            </h2>
+
+            <p class="section-subtitle">
+
+                No existe un reglamento oficial. Estas son las características
+                que los aficionados han asociado al concepto.
+
+            </p>
+
+
+            <div class="rules-grid">
+
+
+                <article class="rule" data-number="01">
+
+                    <div class="rule-icon">🎩</div>
+
+                    <h3>
+                        La genialidad inesperada
+                    </h3>
+
+                    <p>
+
+                        Cuando parece que no hay ninguna solución,
+                        aparece una jugada que nadie esperaba.
+
+                    </p>
+
+                </article>
+
+
+                <article class="rule" data-number="02">
+
+                    <div class="rule-icon">🧠</div>
+
+                    <h3>
+                        El contexto desaparece
+                    </h3>
+
+                    <p>
+
+                        El marcador, el minuto y la importancia del partido
+                        parecen dejar de existir durante algunos segundos.
+
+                    </p>
+
+                </article>
+
+
+                <article class="rule" data-number="03">
+
+                    <div class="rule-icon">💥</div>
+
+                    <h3>
+                        La cagada inesperada
+                    </h3>
+
+                    <p>
+
+                        Después de una gran actuación puede aparecer una
+                        decisión completamente innecesaria.
+
+                    </p>
+
+                </article>
+
+
+                <article class="rule" data-number="04">
+
+                    <div class="rule-icon">🎭</div>
+
+                    <h3>
+                        El personaje
+                    </h3>
+
+                    <p>
+
+                        Algunos jugadores construyen una personalidad que
+                        se vuelve parte de su leyenda.
+
+                    </p>
+
+                </article>
+
+
+                <article class="rule" data-number="05">
+
+                    <div class="rule-icon">🔥</div>
+
+                    <h3>
+                        La emoción
+                    </h3>
+
+                    <p>
+
+                        El jugador puede reaccionar desde la emoción antes
+                        que desde la lógica competitiva.
+
+                    </p>
+
+                </article>
+
+
+                <article class="rule" data-number="06">
+
+                    <div class="rule-icon">🇨🇴</div>
+
+                    <h3>
+                        El realismo mágico
+                    </h3>
+
+                    <p>
+
+                        Lo improbable no solamente ocurre:
+                        ocurre de una manera espectacularmente colombiana.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         MAGIA VS CAOS
+    ========================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+                El futbolista colombiano:
+                <span>magia vs. caos</span>
+            </h2>
+
+            <p class="section-subtitle">
+
+                La teoría funciona precisamente porque puede interpretarse
+                de dos maneras completamente diferentes.
+
+            </p>
+
+
+            <div class="split">
+
+
+                <article class="magic">
+
+                    <h3>
+                        ⚡ Modo MAGIA
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Gol imposible.
+                        </li>
+
+                        <li>
+                            Pase que nadie vio.
+                        </li>
+
+                        <li>
+                            Regate inesperado.
+                        </li>
+
+                        <li>
+                            Golazo desde lejos.
+                        </li>
+
+                        <li>
+                            Chilena.
+                        </li>
+
+                        <li>
+                            Rabona cuando nadie la pidió.
+                        </li>
+
+                        <li>
+                            Aparecer en el momento histórico.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article class="chaos">
+
+                    <h3>
+                        💥 Modo CAOS
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Expulsión innecesaria.
+                        </li>
+
+                        <li>
+                            Discusión con el rival.
+                        </li>
+
+                        <li>
+                            Decisión impulsiva.
+                        </li>
+
+                        <li>
+                            Error en el momento menos oportuno.
+                        </li>
+
+                        <li>
+                            Desconcentración.
+                        </li>
+
+                        <li>
+                            Acción difícil de explicar.
+                        </li>
+
+                        <li>
+                            Convertirse inesperadamente en protagonista.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         QUINTERO
+    ========================================================== -->
+
+    <section class="featured">
+
+        <div class="container">
+
+            <div class="featured-content">
+
+                <span class="tag">
+                    Caso emblemático
+                </span>
+
+                <h2>
+                    JUANFER
+                    <span>QUINTERO</span>
+                </h2>
+
+                <p>
+
+                    El ejemplo más utilizado por Luquitas Rodríguez para
+                    explicar la teoría es el gol de Juan Fernando Quintero
+                    contra Boca Juniors en la final de la Copa Libertadores
+                    2018.
+
+                </p>
+
+                <p class="quote">
+
+                    La idea humorística es que Quintero ejecuta una acción
+                    técnicamente extraordinaria en uno de los escenarios
+                    más importantes posibles como si estuviera jugando un
+                    partido informal.
+
+                </p>
+
+                <p>
+
+                    Independientemente de si uno acepta o no la teoría,
+                    la jugada representa perfectamente la parte de
+                    <strong>"magia"</strong> del concepto.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         JUGADORES
+    ========================================================== -->
+
+    <section class="players" id="jugadores">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                El <span>multiverso</span> colombiano
+            </h2>
+
+            <p class="section-subtitle">
+
+                Estos jugadores aparecen frecuentemente en conversaciones
+                relacionadas con la teoría, aunque por razones muy distintas.
+
+            </p>
+
+
+            <div class="players-grid">
+
+
+                <!-- QUINTERO -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Quintero%202018.png"
+                            alt="Juan Fernando Quintero">
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <small>
+                            MAGIA
+                        </small>
+
+                        <h3>
+                            Juan Fernando Quintero
+                        </h3>
+
+                        <p>
+
+                            Asociado principalmente con el gol de la final
+                            de Libertadores de 2018 y con la creatividad
+                            técnica llevada al extremo.
+
+                        </p>
+
+                        <span class="player-tag">
+                            "¿Contexto? ¿Cuál contexto?"
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HIGUITA -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Ren%C3%A9%20Higuita%2C%202007.jpg"
+                            alt="René Higuita">
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <small>
+                            REVOLUCIÓN
+                        </small>
+
+                        <h3>
+                            René Higuita
+                        </h3>
+
+                        <p>
+
+                            El arquero que convirtió salir del área y jugar
+                            con los pies en parte de su identidad.
+
+                            El "escorpión" en Wembley es uno de los símbolos
+                            más recordados.
+
+                        </p>
+
+                        <span class="player-tag">
+                            El arquero sin manual
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ASPRILLA -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Faustina%20Asprilla%20en%202018%2001.jpg"
+                            alt="Faustino Asprilla">
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <small>
+                            PERSONAJE
+                        </small>
+
+                        <h3>
+                            Faustino Asprilla
+                        </h3>
+
+                        <p>
+
+                            Talento, velocidad, personalidad y una carrera
+                            llena de episodios que ayudaron a construir
+                            la imagen del futbolista colombiano imprevisible.
+
+                        </p>
+
+                        <span class="player-tag">
+                            El Tino
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TEO -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Te%C3%B3filo%20Guti%C3%A9rrez%20%28cropped%29.jpg"
+                            alt="Teófilo Gutiérrez">
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <small>
+                            PERSONALIDAD
+                        </small>
+
+                        <h3>
+                            Teófilo Gutiérrez
+                        </h3>
+
+                        <p>
+
+                            Uno de los futbolistas colombianos más asociados
+                            con el concepto de "personaje": talento,
+                            provocación, personalidad y episodios polémicos.
+
+                        </p>
+
+                        <span class="player-tag">
+                            El personaje nunca se fue
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FABRA -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Frank%20Fabra%20contra%20I%20del%20Valle%20%28cropped%29.jpg"
+                            alt="Frank Fabra">
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <small>
+                            CAOS
+                        </small>
+
+                        <h3>
+                            Frank Fabra
+                        </h3>
+
+                        <p>
+
+                            Su expulsión en la final de la Copa Libertadores
+                            2023 frente a Fluminense se convirtió en uno de
+                            los ejemplos modernos más repetidos de la teoría.
+
+                        </p>
+
+                        <span class="player-tag">
+                            El contexto se fue
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JHON DURAN -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Jhon%20Dur%C3%A1n%2C%20SL%20Benfica%2C%2026%20Aug%202026.jpg"
+                            alt="Jhon Durán">
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <small>
+                            MAGIA + CAOS
+                        </small>
+
+                        <h3>
+                            Jhon Durán
+                        </h3>
+
+                        <p>
+
+                            La prensa colombiana ha utilizado recientemente
+                            la teoría para discutir su enorme potencial,
+                            sus decisiones y la distancia entre talento y
+                            comportamiento competitivo.
+
+                        </p>
+
+                        <span class="player-tag">
+                            Potencial impredecible
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CASOS
+    ========================================================== -->
+
+    <section class="cases" id="casos">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Casos que alimentaron la <span>leyenda</span>
+            </h2>
+
+            <p class="section-subtitle">
+
+                No todos estos acontecimientos prueban la teoría.
+                Son ejemplos que aficionados y periodistas han utilizado
+                para hablar sobre ella.
+
+            </p>
+
+
+            <article class="case">
+
+                <div class="case-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Quintero y el gol de Madrid
+                    </h3>
+
+                    <p>
+
+                        En la final de la Libertadores 2018 entre River Plate
+                        y Boca Juniors, Juan Fernando Quintero marcó uno de
+                        los goles más recordados de la historia reciente del
+                        torneo.
+
+                    </p>
+
+                    <span class="context">
+                        MAGIA — CONTEXTO MÁXIMO
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="case">
+
+                <div class="case-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Carrascal y Campuzano
+                    </h3>
+
+                    <p>
+
+                        Luquitas Rodríguez utilizó expulsiones de Jorge Carrascal
+                        y Jorman Campuzano como ejemplos del lado caótico de
+                        su planteamiento.
+
+                    </p>
+
+                    <span class="context">
+                        CAOS — EJEMPLO ORIGINAL DE LA TEORÍA
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="case">
+
+                <div class="case-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        Fabra en la final de 2023
+                    </h3>
+
+                    <p>
+
+                        La expulsión de Frank Fabra en la final de la
+                        Copa Libertadores 2023 volvió a poner la teoría
+                        en circulación masiva en redes.
+
+                    </p>
+
+                    <span class="context">
+                        CAOS — MOMENTO DECISIVO
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="case">
+
+                <div class="case-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        René Higuita y el escorpión
+                    </h3>
+
+                    <p>
+
+                        En Wembley, Higuita realizó una de las acciones más
+                        icónicas de la historia de los porteros.
+
+                        No era una decisión convencional para un arquero,
+                        precisamente por eso se convirtió en leyenda.
+
+                    </p>
+
+                    <span class="context">
+                        MAGIA — IMPROVISACIÓN
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="case">
+
+                <div class="case-number">
+                    05
+                </div>
+
+                <div>
+
+                    <h3>
+                        Jhon Durán y la versión moderna
+                    </h3>
+
+                    <p>
+
+                        Durante 2025 y 2026, medios colombianos retomaron
+                        la teoría para analizar a Jhon Durán y otros jugadores,
+                        demostrando que el concepto sigue evolucionando.
+
+                    </p>
+
+                    <span class="context">
+                        2025–2026 — NUEVA GENERACIÓN
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PERSONALIDAD
+    ========================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Los <span>arquetipos</span>
+            </h2>
+
+            <p class="section-subtitle">
+
+                La teoría puede entenderse mejor como una colección de
+                personajes futbolísticos.
+
+            </p>
+
+
+            <div class="personality-grid">
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🎨
+                    </div>
+
+                    <h3>
+                        El artista
+                    </h3>
+
+                    <p>
+                        Ve una jugada que nadie más ve.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🧨
+                    </div>
+
+                    <h3>
+                        El explosivo
+                    </h3>
+
+                    <p>
+                        Convierte cualquier discusión en una historia.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🦸
+                    </div>
+
+                    <h3>
+                        El héroe
+                    </h3>
+
+                    <p>
+                        Aparece cuando el partido necesita una genialidad.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🤨
+                    </div>
+
+                    <h3>
+                        El inexplicable
+                    </h3>
+
+                    <p>
+                        Hace algo que nadie puede explicar.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🪄
+                    </div>
+
+                    <h3>
+                        El improvisador
+                    </h3>
+
+                    <p>
+                        Convierte una situación normal en una jugada inesperada.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🔥
+                    </div>
+
+                    <h3>
+                        El pasional
+                    </h3>
+
+                    <p>
+                        Juega con emociones muy visibles.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🎲
+                    </div>
+
+                    <h3>
+                        El impredecible
+                    </h3>
+
+                    <p>
+                        Nadie sabe qué versión aparecerá.
+                    </p>
+
+                </article>
+
+
+                <article class="personality">
+
+                    <div class="emoji">
+                        🇨🇴
+                    </div>
+
+                    <h3>
+                        El colombiano
+                    </h3>
+
+                    <p>
+                        Según el meme: puede ser cualquiera de los anteriores.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REDES
+    ========================================================== -->
+
+    <section class="social-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Cuando el meme se convirtió en <span>debate</span>
+            </h2>
+
+            <p class="section-subtitle">
+
+                Las redes no solamente repiten la teoría:
+                también discuten si realmente tiene sentido.
+
+            </p>
+
+
+            <div class="social-grid">
+
+
+                <article class="social-card">
+
+                    <div class="platform">
+                        REDDIT
+                    </div>
+
+                    <p>
+
+                        Algunos usuarios colombianos consideran que la teoría
+                        describe situaciones reales que se repiten en el fútbol.
+
+                    </p>
+
+                    <div class="opinion">
+
+                        "Puede hacer una genialidad o mandarse una cagada
+                        en el mismo partido."
+
+                    </div>
+
+                </article>
+
+
+                <article class="social-card">
+
+                    <div class="platform">
+                        OTRA MIRADA
+                    </div>
+
+                    <p>
+
+                        Otros usuarios sostienen que el fenómeno no es
+                        exclusivamente colombiano y que se puede encontrar
+                        en jugadores de cualquier nacionalidad.
+
+                    </p>
+
+                    <div class="opinion">
+
+                        El argumento: estamos seleccionando solamente
+                        los ejemplos que confirman el meme.
+
+                    </div>
+
+                </article>
+
+
+                <article class="social-card">
+
+                    <div class="platform">
+                        DEBATE CULTURAL
+                    </div>
+
+                    <p>
+
+                        También apareció una discusión sobre si la teoría
+                        puede terminar convirtiéndose en un estereotipo
+                        sobre los futbolistas colombianos.
+
+                    </p>
+
+                    <div class="opinion">
+
+                        La teoría nació como humor, pero su interpretación
+                        depende de quién la utilice.
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         DEBATE
+    ========================================================== -->
+
+    <section class="debate" id="debate">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                ¿Teoría real o <span>sesgo?</span>
+            </h2>
+
+            <p class="section-subtitle">
+
+                Aquí está la parte que muchas versiones del meme olvidan:
+                también hay argumentos para cuestionarlo.
+
+            </p>
+
+
+            <div class="debate-grid">
+
+
+                <article class="argument positive">
+
+                    <h3>
+                        ¿Por qué parece funcionar?
+                    </h3>
+
+                    <p>
+
+                        Existen varios casos muy llamativos que encajan
+                        perfectamente con el concepto:
+
+                        genialidades inesperadas, expulsiones en momentos
+                        decisivos y personalidades particularmente fuertes.
+
+                    </p>
+
+                </article>
+
+
+                <article class="argument negative">
+
+                    <h3>
+                        ¿Por qué puede ser un sesgo?
+                    </h3>
+
+                    <p>
+
+                        Porque los errores y genialidades también ocurren
+                        con futbolistas argentinos, brasileños, uruguayos,
+                        europeos y de prácticamente cualquier país.
+
+                    </p>
+
+                </article>
+
+
+                <article class="argument negative">
+
+                    <h3>
+                        El problema de la generalización
+                    </h3>
+
+                    <p>
+
+                        Convertir algunos casos individuales en una
+                        característica de millones de futbolistas colombianos
+                        es una generalización.
+
+                    </p>
+
+                </article>
+
+
+                <article class="argument positive">
+
+                    <h3>
+                        Pero el meme sí explica algo
+                    </h3>
+
+                    <p>
+
+                        Aunque no sea una teoría científica, funciona como
+                        una forma divertida de describir una percepción
+                        cultural sobre determinados jugadores colombianos.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         MITO VS REALIDAD
+    ========================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Mito <span>vs.</span> realidad
+            </h2>
+
+            <table class="myth-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            El meme dice...
+                        </th>
+
+                        <th>
+                            Una mirada más seria
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            "Los colombianos juegan sin contexto."
+                        </td>
+
+                        <td>
+                            Es una descripción humorística, no una conclusión
+                            científica sobre una nacionalidad.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            "No tienen mentalidad."
+                        </td>
+
+                        <td>
+                            El rendimiento competitivo depende de muchos factores:
+                            entrenador, táctica, entorno, experiencia, presión,
+                            compañeros y circunstancias del partido.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            "Siempre hacen locuras."
+                        </td>
+
+                        <td>
+                            Los casos extraordinarios son precisamente los que
+                            más fácilmente se recuerdan y comparten.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            "La teoría demuestra que son mejores."
+                        </td>
+
+                        <td>
+                            No demuestra superioridad ni inferioridad.
+                            Es principalmente una narrativa futbolera.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            "Solo ocurre en Colombia."
+                        </td>
+
+                        <td>
+                            Jugadores de muchas nacionalidades protagonizan
+                            comportamientos similares.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         TIMELINE
+    ========================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Cómo evolucionó la <span>teoría</span>
+            </h2>
+
+            <div class="timeline">
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        2018
+                    </div>
+
+                    <h3>
+                        Quintero escribe una página histórica
+                    </h3>
+
+                    <p>
+
+                        El gol de Juan Fernando Quintero en la final
+                        de la Libertadores se convertiría posteriormente
+                        en uno de los ejemplos favoritos para explicar
+                        la parte "mágica" de la teoría.
+
+                    </p>
+
+                </article>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        2020–2021
+                    </div>
+
+                    <h3>
+                        Aparece la formulación de Luquitas Rodríguez
+                    </h3>
+
+                    <p>
+
+                        Rodríguez populariza la idea de que determinados
+                        futbolistas colombianos juegan "sin contexto",
+                        utilizando como ejemplos a Quintero, Carrascal
+                        y Campuzano.
+
+                    </p>
+
+                </article>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        2023
+                    </div>
+
+                    <h3>
+                        Fabra revive la teoría
+                    </h3>
+
+                    <p>
+
+                        La expulsión de Frank Fabra durante la final
+                        de la Libertadores contra Fluminense provoca
+                        que el concepto vuelva a circular con fuerza.
+
+                    </p>
+
+                </article>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        2024
+                    </div>
+
+                    <h3>
+                        La final de Copa América
+                    </h3>
+
+                    <p>
+
+                        La derrota de Colombia frente a Argentina en la
+                        final de la Copa América 2024 vuelve a generar
+                        discusiones en redes sobre la supuesta relación
+                        entre talento, presión y partidos decisivos.
+
+                    </p>
+
+                </article>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        2025–2026
+                    </div>
+
+                    <h3>
+                        La teoría se vuelve parte del vocabulario futbolero
+                    </h3>
+
+                    <p>
+
+                        Medios colombianos comienzan a utilizar directamente
+                        la expresión para analizar a nuevos jugadores,
+                        incluyendo a Jhon Durán y Cristhian Mosquera.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CONCLUSIÓN
+    ========================================================== -->
+
+    <section class="featured">
+
+        <div class="container">
+
+            <div class="featured-content">
+
+                <span class="tag">
+                    Entonces...
+                </span>
+
+                <h2>
+                    ¿EXISTE
+                    <span>LA TEORÍA?</span>
+                </h2>
+
+                <p>
+
+                    Como teoría científica: no.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Como meme futbolero, concepto cultural y manera de
+                    describir ciertos momentos del fútbol colombiano:
+                    definitivamente existe.
+
+                </p>
+
+                <p class="quote">
+
+                    Tal vez la verdadera teoría no dice que el futbolista
+                    colombiano sea incapaz de entender el contexto.
+
+                    Dice que, en determinados momentos, parece capaz
+                    de ignorarlo completamente.
+
+                </p>
+
+                <p>
+
+                    Y justamente ahí está la gracia:
+
+                    cuando todo el estadio espera una cosa...
+
+                    el colombiano puede hacer otra.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FUENTES
+    ========================================================== -->
+
+    <section class="sources" id="fuentes">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Fuentes y <span>referencias</span>
+            </h2>
+
+            <p class="section-subtitle">
+
+                La página combina artículos periodísticos, columnas de opinión,
+                discusiones de usuarios y material de Wikimedia Commons.
+
+                Las opiniones de redes sociales se presentan como opiniones
+                de usuarios, no como hechos demostrados.
+
+            </p>
+
+
+            <div class="source-list">
+
+
+                <a
+                    class="source"
+                    href="https://cambiocolombia.com/puntos-de-vista/articulo/2025/8/la-teoria-de-los-colombianos-sin-contexto"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Cambio Colombia — La teoría de los colombianos sin contexto
+                    </strong>
+
+                    <span>
+                        Análisis de Martín Jaramillo Ortega.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://www.tycsports.com/curiosidades/ankara-la-teoria-argentina-colombia-copa-america-luquitas-rodriguez-id354590.html"
+                    target="_blank"
+                >
+
+                    <strong>
+                        TyC Sports — Ankara vs. La Teoría
+                    </strong>
+
+                    <span>
+                        Explicación del origen de la teoría de Luquitas Rodríguez.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://www.infobae.com/colombia/deportes/2026/05/30/cristhian-mosquera-hizo-que-la-teoria-del-colombiano-volviera-a-ser-tendencia-tras-su-fatidica-final-en-champions/"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Infobae Colombia — Cristhian Mosquera
+                    </strong>
+
+                    <span>
+                        La teoría vuelve a circular en 2026.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://www.elcolombiano.com/deportes/futbol/jhon-jader-duran-teoria-del-futbolista-colombiano-magia-caos-BJ32089679"
+                    target="_blank"
+                >
+
+                    <strong>
+                        El Colombiano — Jhon Durán
+                    </strong>
+
+                    <span>
+                        Análisis de la relación entre "magia y caos".
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://www.reddit.com/r/colfutbol/comments/1tsa559/creen_que_la_teoria_del_jugador_colombiano_sea/"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Reddit — r/colfutbol
+                    </strong>
+
+                    <span>
+                        Discusión de aficionados colombianos en 2026.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://www.reddit.com/r/Colombia/comments/1mgb0hr/la_teoria_del_futbolista_colombiano/"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Reddit — r/Colombia
+                    </strong>
+
+                    <span>
+                        Debate sobre el origen y significado del concepto.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://commons.wikimedia.org/wiki/File:Quintero_2018.png"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Wikimedia Commons — Juan Fernando Quintero
+                    </strong>
+
+                    <span>
+                        Fotografía y datos de licencia.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://commons.wikimedia.org/wiki/Category:Ren%C3%A9_Higuita"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Wikimedia Commons — René Higuita
+                    </strong>
+
+                    <span>
+                        Archivo fotográfico.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://commons.wikimedia.org/wiki/Category:Faustino_Asprilla"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Wikimedia Commons — Faustino Asprilla
+                    </strong>
+
+                    <span>
+                        Archivo fotográfico.
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="source"
+                    href="https://commons.wikimedia.org/wiki/File:Te%C3%B3filo_Guti%C3%A9rrez_%28cropped%29.jpg"
+                    target="_blank"
+                >
+
+                    <strong>
+                        Wikimedia Commons — Teófilo Gutiérrez
+                    </strong>
+
+                    <span>
+                        Fotografía de Agência Brasil.
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="footer-title">
+
+                    FÚTBOL
+                    <span>SIN CONTEXTO</span>
+
+                </div>
+
+            </div>
+
+
+            <p class="footer-note">
+
+                Proyecto web educativo sobre una narrativa popular del
+                fútbol colombiano. La "Teoría del Futbolista Colombiano"
+                se presenta como fenómeno cultural y humorístico, no como
+                una afirmación científica sobre una nacionalidad.
+
+                Las imágenes enlazadas desde Wikimedia Commons pertenecen
+                a sus respectivos autores y están sujetas a sus licencias.
+
+            </p>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 — Proyecto sobre cultura futbolera colombiana. - Didier Peñaranda Diaz (Barranquillero hasta la muerte, con amor). Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* =========================================================
+           MENÚ MÓVIL
+        ========================================================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+
+        const navLinks = document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        /* =========================================================
+           CERRAR MENÚ AL HACER CLICK
+        ========================================================== */
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+        /* =========================================================
+           ANIMACIÓN AL HACER SCROLL
+        ========================================================== */
+
+        const observer = new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+
+                        entry.target.style.transform =
+                            "translateY(0)";
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+        document.querySelectorAll(
+
+            ".rule, .player-card, .case, .personality, .social-card, .argument, .timeline-item"
+
+        ).forEach(element => {
+
+            element.style.opacity = "0";
+
+            element.style.transform =
+                "translateY(25px)";
+
+            element.style.transition =
+                "opacity 0.7s ease, transform 0.7s ease";
+
+            observer.observe(element);
+
+        });
+
+
+        /* =========================================================
+           EFECTO PARALLAX SIMPLE EN HERO
+        ========================================================== */
+
+        window.addEventListener("scroll", () => {
+
+            const hero = document.querySelector(".hero");
+
+            const scroll = window.scrollY;
+
+            if (scroll < window.innerHeight) {
+
+                hero.style.backgroundPosition =
+                    `center ${scroll * 0.25}px`;
+
+            }
+
+        });
+
+
+        /* =========================================================
+           MENSAJE DE CONSOLA
+        ========================================================== */
+
+        console.log(
+            "🇨🇴 Bienvenido al fútbol sin contexto."
+        );
+
+        console.log(
+            "Magia + caos + talento + decisiones inexplicables."
+        );
+
+    </script>
+
+
+</body>
+</html>
